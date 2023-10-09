@@ -1,23 +1,21 @@
-console.log("Hello world")
+const arr = [1, 2, 3, 4, 5]
 
-function domManipulation () {
-    const rootElement = document.querySelector('#root')
-    console.log(rootElement)
-    rootElement.innerHTML = "this is done by dom manipulation"
-}
+/* function returnDouble(number) {
+    return number * 2
+} */
 
-function logClick() {
-    console.log('clicked')
-}
+//const returnDouble2 = number => number * 2
 
-let tickCount = 0
+/* for (let i = 0; i < arr.length; i++) {
+    console.log(returnDouble2(arr[i]))
+} 
+ */
 
-function logTick() {
-    console.log(`tick ${tickCount}`)
-    tickCount++
-}
+/* function logDouble(number) {
+    console.log(number * 2)
+} */
 
-window.addEventListener('load', domManipulation)
-window.addEventListener('click', logClick)
+arr.forEach(element => console.log(element * 2)) 
+   
 
-window.setInterval(logTick, 1000)
+//arr.forEach(logDouble)
