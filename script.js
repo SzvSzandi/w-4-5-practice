@@ -1,21 +1,68 @@
-const arr = [1, 2, 3, 4, 5]
+const data = [
+    {
+        name: "Kovács János",
+        age: 29,
+        subjects: [
+            {
+                subjectName:"Maths",
+                subjectGrade: 5
+            },
+            {
+                subjectName: "Physics",
+                subjectGrade: 3
+            },
+            {
+                subjectName: "English",
+                subjectGrade: 2
+            }
+        ]
+    },
+    {
+        name: "Kis Péter",
+        age: 16,
+        subjects: [
+            {
+                subjectName:"Maths",
+                subjectGrade: 2
+            },
+            {
+                subjectName: "Physics",
+                subjectGrade: 5
+            },
+            {
+                subjectName: "English",
+                subjectGrade: 4
+            }
+        ]
+    },
+    {
+        name: "Leföld Elek",
+        age: 95,
+        subjects: [
+            {
+                subjectName:"Maths",
+                subjectGrade: 2
+            },
+            {
+                subjectName: "Physics",
+                subjectGrade: 1
+            },
+            {
+                subjectName: "English",
+                subjectGrade: 5
+            }
+        ]
+    }
+ 
+]
 
-/* function returnDouble(number) {
-    return number * 2
+/* for (let i = 0; i< data.length; i++) {
+    console.log(data[i].name)
 } */
 
-//const returnDouble2 = number => number * 2
+//data.forEach(student => console.log(student.name))
 
-/* for (let i = 0; i < arr.length; i++) {
-    console.log(returnDouble2(arr[i]))
-} 
- */
-
-/* function logDouble(number) {
-    console.log(number * 2)
-} */
-
-arr.forEach(element => console.log(element * 2)) 
-   
-
-//arr.forEach(logDouble)
+data.forEach(student => {
+    console.log(student.name)
+    student.subjects.forEach(subject => console.log(`${subject.subjectName}: ${subject.subjectGrade}`))
+})
